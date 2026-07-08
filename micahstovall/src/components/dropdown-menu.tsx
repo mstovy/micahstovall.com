@@ -111,7 +111,7 @@ export function DropdownMenuContent({
   if (!open) return null;
 
   return (
-    <div className="absolute right-0 z-50 mt-2 w-56 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-lg ring-1 ring-black/5">
+    <div className="absolute right-0 z-50 mt-2 w-56 overflow-visible rounded-3xl border border-slate-200 bg-white shadow-lg ring-1 ring-black/5">
       <div className="flex flex-col p-2">{children}</div>
     </div>
   );
@@ -205,7 +205,7 @@ export function DropdownMenuSubContent({
   if (!open) return null;
 
   return (
-    <div className="absolute left-full top-0 ml-2 w-56 rounded-2xl border border-slate-200 bg-white p-2 shadow-lg">
+    <div className="absolute left-full top-0 ml-0 w-56 rounded-2xl border border-slate-200 bg-white p-2 shadow-lg z-50">
       {children}
     </div>
   );

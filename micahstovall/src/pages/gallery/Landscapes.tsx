@@ -59,12 +59,12 @@ export default function Landscapes() {
 
   return (
     <section className="mx-auto w-full max-w-7xl px-4 py-12">
-      <h1 className="mb-6 text-3xl font-semibold text-slate-900 dark:text-slate-100">MountainBiking Gallery</h1>
+      <h1 className="mb-6 text-3xl font-semibold text-slate-900 dark:text-slate-100">Landscape Gallery</h1>
 
       <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {images.length === 0 && (
           <div className="col-span-full rounded-lg border border-dashed border-slate-200 p-8 text-center text-sm text-slate-600">
-            No images found in <span className="font-mono">src/assets/images/mountainbiking</span>
+            No images found in <span className="font-mono">src/assets/images/landscapes</span>
           </div>
         )}
 

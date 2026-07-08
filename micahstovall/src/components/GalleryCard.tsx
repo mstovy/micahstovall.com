@@ -27,9 +27,7 @@ export default function GalleryCard({ to, title, description, imageSrc }: Galler
       <div className="relative z-10 flex min-h-[260px] flex-col justify-end p-6 sm:p-8">
         <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-200/80">Gallery</p>
         <h2 className="mt-3 text-2xl font-semibold text-white">{title}</h2>
-        {description ? (
           <p className="mt-3 text-sm leading-6 text-slate-200/80">{description}</p>
-        ) : null}
       </div>
     </NavLink>
   )

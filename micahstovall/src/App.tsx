@@ -1,10 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Layout from './Layout'
-import Home from './pages/Home'
-import Gallery from './pages/Gallery'
 import About from './pages/About'
 import Contact from './pages/Contact'
-import RaceTimer from './pages/RaceTimer'
+import Gallery from './pages/Gallery'
 import GalleryMountainBiking from './pages/gallery/MountainBiking'
 import GalleryClimbing from './pages/gallery/Climbing'
 import GalleryLandscapes from './pages/gallery/Landscapes'
@@ -13,6 +10,12 @@ import GalleryBackcountrySkiing from './pages/gallery/BackcountrySkiing'
 import GalleryStreet from './pages/gallery/Street'
 import GalleryFineArt from './pages/gallery/FineArt'
 import GalleryProducts from './pages/gallery/Products'
+import Home from './pages/Home'
+import Layout from './Layout'
+import Music from './pages/Music'
+import RaceTimer from './pages/RaceTimer'
+import WebDev from './pages/WebDev'
+
 function App() {
   return (
     <BrowserRouter>
@@ -31,6 +34,8 @@ function App() {
           <Route path="gallery/fineart" element={<GalleryFineArt />} />
           <Route path="gallery/products" element={<GalleryProducts />} />
           <Route path="racetimer" element={<RaceTimer />} />
+          <Route path="music" element={<Music />} />
+          <Route path="webdev" element={<WebDev />} />
         </Route>
       </Routes>
     </BrowserRouter>

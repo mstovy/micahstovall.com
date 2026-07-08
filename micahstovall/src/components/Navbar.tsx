@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import {
   DropdownMenu,
   DropdownMenuTrigger,
@@ -25,6 +25,7 @@ function linkClass({ isActive }: { isActive: boolean }) {
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
+  const navigate = useNavigate()
 
   return (
     <header className="sticky top-0 z-40 border-b border-slate-200/70 bg-white/95 backdrop-blur-xl shadow-sm">
@@ -47,10 +48,10 @@ export default function Navbar() {
               Menu
             </DropdownMenuTrigger>
             <DropdownMenuContent>
-              <DropdownMenuItem onSelect={() => setMobileOpen(false)}>
+              <DropdownMenuItem onSelect={() => { navigate('/webdev'); setMobileOpen(false); }}>
                 Web Development
               </DropdownMenuItem>
-              <DropdownMenuItem onSelect={() => setMobileOpen(false)}>
+              <DropdownMenuItem onSelect={() => { navigate('/music'); setMobileOpen(false); }}>
                 Music
               </DropdownMenuItem>
               <DropdownMenuSub>
@@ -58,7 +59,7 @@ export default function Navbar() {
                       Tools
                     </DropdownMenuSubTrigger>
                     <DropdownMenuSubContent>
-                      <DropdownMenuItem onSelect={() => setMobileOpen(false)}>
+                      <DropdownMenuItem onSelect={() => { navigate('/racetimer'); setMobileOpen(false); }}>
                         Race Timer
                       </DropdownMenuItem>
                     </DropdownMenuSubContent>

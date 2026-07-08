@@ -82,11 +82,9 @@ export default function GalleryCard({
             {title}
           </CardTitle>
 
-          {description ? (
-            <CardDescription className="mt-3 text-sm leading-6 text-slate-200/80">
-              {description}
-            </CardDescription>
-          ) : null}
+          <CardDescription className="mt-3 text-sm leading-6 text-slate-200/80">
+            {description}
+          </CardDescription>
         </CardContent>
       </Card>
     </NavLink>
