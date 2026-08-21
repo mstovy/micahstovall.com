@@ -42,7 +42,7 @@ export function CardDescription({
   className?: string;
   children: React.ReactNode;
 }) {
-  return <p className={className}>{children}</p>;
+  return <div className={className}>{children}</div>;
 }
 
 interface CardProps {

@@ -62,6 +62,9 @@ export default function Navbar() {
                       <DropdownMenuItem onSelect={() => { navigate('/racetimer'); setMobileOpen(false); }}>
                         Race Timer
                       </DropdownMenuItem>
+                        <DropdownMenuItem onSelect={() => { navigate('/lightning'); setMobileOpen(false); }}>
+                        Lightning
+                      </DropdownMenuItem>
                     </DropdownMenuSubContent>
                   </DropdownMenuSub>
             </DropdownMenuContent>

@@ -71,7 +71,7 @@ export default function ParallaxImageSection({ src, alt, title, description }: P
         <div className="max-w-sm rounded-2xl border border-violet-200/15 bg-[#1d102a]/60 p-4 backdrop-blur-md">
 
   <p className="text-[10px] uppercase tracking-[0.24em] text-yellow-100/80">
-    Featured image
+    Explore
   </p>
 
   <h2 className="mt-2 text-lg font-semibold tracking-tight text-white sm:text-xl">

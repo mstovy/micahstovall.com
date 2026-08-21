@@ -15,6 +15,7 @@ import Layout from './Layout'
 import Music from './pages/Music'
 import RaceTimer from './pages/RaceTimer'
 import WebDev from './pages/WebDev'
+import Lightning from './pages/Lightning'
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
           <Route path="racetimer" element={<RaceTimer />} />
           <Route path="music" element={<Music />} />
           <Route path="webdev" element={<WebDev />} />
+          <Route path="lightning" element={<Lightning />} />
         </Route>
       </Routes>
     </BrowserRouter>

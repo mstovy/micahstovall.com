@@ -1,6 +1,6 @@
 import GalleryCard from "../components/GalleryCard"
 
-const cardsTop = [
+const cards = [
   {
     title: "Mountain Biking",
     subtitle: "Mountain Biking",
@@ -24,10 +24,7 @@ const cardsTop = [
     subtitle: "Product Showcases",
     to: "/gallery/products",
     image: "../assets/images/products/11-3-24_i35-insta-6.jpg"
-  }
-]
-
-const cardsBottom = [
+  },
   {
     title: "Street",
     subtitle: "Street Photography",
@@ -59,19 +56,12 @@ export default function Gallery() {
     <main className="w-full text-gray-900 dark:text-gray-100">
           <div className="max-w-6xl mx-auto px-6">
             <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow">Gallery</h1>
-            <p className="mt-3 text-white/90 max-w-2xl">A curated selection of photo categories. Explore the collections below.</p>
+            <p className="mt-3 text-white/90 max-w-2xl">A curated selection of photo galleries. Explore the collections below.</p>
           </div>
 
       <section className="max-w-7xl mx-auto px-6 py-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {cardsTop.map((c) => (
-            <GalleryCard key={c.title} title={c.title} subtitle={c.subtitle} imageSrc={c.image} to={c.to} />
-          ))}
-        </div>
-      </section>
-            <section className="max-w-7xl mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {cardsBottom.map((c) => (
+          {cards.map((c) => (
             <GalleryCard key={c.title} title={c.title} subtitle={c.subtitle} imageSrc={c.image} to={c.to} />
           ))}
         </div>
@@ -79,3 +69,4 @@ export default function Gallery() {
     </main>
   )
 }
+

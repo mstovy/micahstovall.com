@@ -183,10 +183,9 @@ export function DropdownMenuSubTrigger({
     <button
       type="button"
       onClick={() => setOpen(!open)}
-      className="flex w-full items-center justify-between rounded-xl px-3 py-2 text-left text-sm text-violet-50 transition hover:bg-violet-500/15 hover:text-yellow-100"
+      className="flex w-full items-center justify-between rounded-xl px-3 py-2 text-center text-sm text-violet-50 transition hover:bg-violet-500/15 hover:text-yellow-100"
     >
       {children}
-      <span className="text-yellow-200">›</span>
     </button>
   );
 }
@@ -205,7 +204,7 @@ export function DropdownMenuSubContent({
   if (!open) return null;
 
   return (
-    <div className="absolute left-full top-0 ml-0 w-56 rounded-2xl border border-violet-300/20 bg-[#1d102a] p-2 shadow-lg z-50">
+    <div className="absolute right-full top-0 mr-0 w-56 rounded-2xl border border-violet-300/20 bg-[#1d102a] p-2 shadow-lg z-50">
       {children}
     </div>
   );

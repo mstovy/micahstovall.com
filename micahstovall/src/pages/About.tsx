@@ -42,7 +42,7 @@ export default function About(): JSX.Element {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#120914] via-[#120914]/15 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6">
-                <p className="text-xs font-semibold uppercase tracking-[0.35em] text-yellow-100">Photographer | developer</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.35em] text-yellow-100">Photographer | Developer | Producer/DJ</p>
               </div>
             </div>
           </div>
@@ -57,8 +57,8 @@ export default function About(): JSX.Element {
               </CardTitle>
               <CardDescription className="mt-4 space-y-4">
                 <p className="text-base leading-8 text-violet-100/80">
-                  Hi — I’m Micah. I create clean, minimal photography and web experiences focused on clarity and craft.
-                  This site showcases project work and galleries; reach out via the contact page for project inquiries or collaborations.
+                  Hi, I’m Micah. I shoot adventure style photography, love to produce electronic music that I DJ with and develop web applications.
+                  This site showcases the variety of the projects I work on; reach out via the contact page for project inquiries or collaborations.
                 </p>
                 <p className="text-sm leading-7 text-violet-200/80">
                   Educated with a degree in Photography from the University of Colorado Denver.

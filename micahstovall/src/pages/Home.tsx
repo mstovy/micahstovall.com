@@ -7,14 +7,14 @@ export default function Home() {
         <div className="max-w-4xl space-y-6">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.35em] text-yellow-200/80">
-              Portfolio / Studio / Gallery
+              Photography / Music Production / Software Development
             </p>
             <h1 className="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-              Explore a cinematic collection of photography, music, and digital work.
+              Explore photos, music, and software projects by Micah Stovall
             </h1>
           </div>
           <p className="text-base leading-8 text-violet-100/80 sm:text-lg">
-            The experience is designed to feel immersive and editorial, with every section tuned for calm contrast, bold typography, and modern motion.
+            Need to put something here
           </p>
         </div>
       </section>
