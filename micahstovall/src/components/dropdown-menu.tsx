@@ -89,10 +89,10 @@ export function DropdownMenuTrigger({
       type="button"
       onClick={toggle}
       aria-expanded={open}
-      className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 shadow-sm transition hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-400"
+      className="inline-flex items-center gap-2 rounded-xl border border-violet-300/30 bg-[#2a163c] px-4 py-2 text-sm font-medium text-violet-50 shadow-sm transition hover:bg-[#341b4a] focus:outline-none focus:ring-2 focus:ring-yellow-300/60"
     >
       {children}
-      <span className="text-slate-400">▾</span>
+      <span className="text-yellow-200">▾</span>
     </button>
   );
 }
@@ -111,7 +111,7 @@ export function DropdownMenuContent({
   if (!open) return null;
 
   return (
-    <div className="absolute right-0 z-50 mt-2 w-56 overflow-visible rounded-3xl border border-slate-200 bg-white shadow-lg ring-1 ring-black/5">
+    <div className="absolute right-0 z-50 mt-2 w-56 overflow-visible rounded-3xl border border-violet-300/20 bg-[#1d102a] shadow-lg ring-1 ring-yellow-300/10">
       <div className="flex flex-col p-2">{children}</div>
     </div>
   );
@@ -139,7 +139,7 @@ export function DropdownMenuItem({
     <button
       type="button"
       onClick={handleSelect}
-      className="w-full rounded-xl px-3 py-2 text-left text-sm text-slate-700 transition hover:bg-slate-100"
+      className="w-full rounded-xl px-3 py-2 text-left text-sm text-violet-50 transition hover:bg-violet-500/15 hover:text-yellow-100"
     >
       {children}
     </button>
@@ -183,10 +183,10 @@ export function DropdownMenuSubTrigger({
     <button
       type="button"
       onClick={() => setOpen(!open)}
-      className="flex w-full items-center justify-between rounded-xl px-3 py-2 text-left text-sm text-slate-700 transition hover:bg-slate-100"
+      className="flex w-full items-center justify-between rounded-xl px-3 py-2 text-left text-sm text-violet-50 transition hover:bg-violet-500/15 hover:text-yellow-100"
     >
       {children}
-      <span className="text-slate-400">›</span>
+      <span className="text-yellow-200">›</span>
     </button>
   );
 }
@@ -205,7 +205,7 @@ export function DropdownMenuSubContent({
   if (!open) return null;
 
   return (
-    <div className="absolute left-full top-0 ml-0 w-56 rounded-2xl border border-slate-200 bg-white p-2 shadow-lg z-50">
+    <div className="absolute left-full top-0 ml-0 w-56 rounded-2xl border border-violet-300/20 bg-[#1d102a] p-2 shadow-lg z-50">
       {children}
     </div>
   );

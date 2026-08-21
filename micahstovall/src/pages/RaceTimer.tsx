@@ -52,28 +52,28 @@ function InlineEditPopup({
   const [editedValue, setEditedValue] = useState(initialValue)
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 px-4">
-      <div className="w-full max-w-lg rounded-lg bg-white p-6 shadow-xl">
-        <h2 className="text-lg font-semibold mb-4">Edit Rider Name</h2>
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#120914]/60 px-4 backdrop-blur-sm">
+      <div className="w-full max-w-lg rounded-[1.5rem] border border-violet-300/15 bg-[#1c0d2a] p-6 shadow-[0_30px_100px_-40px_rgba(168,85,247,0.4)]">
+        <h2 className="mb-4 text-lg font-semibold text-white">Edit Rider Name</h2>
         <input
           type="text"
           value={editedValue}
           onChange={(e) => setEditedValue(e.target.value)}
-          className="w-full rounded border border-gray-300 px-3 py-2 text-base focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+          className="w-full rounded-xl border border-violet-300/20 bg-[#120914]/70 px-3 py-2 text-base text-white placeholder:text-violet-200/40 focus:border-yellow-300 focus:outline-none focus:ring-2 focus:ring-yellow-300/40"
           autoFocus
         />
         <div className="mt-4 flex justify-end gap-2">
           <button
             type="button"
             onClick={onCancel}
-            className="rounded border border-gray-300 bg-white px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
+            className="rounded-full border border-violet-300/20 bg-[#2a163c] px-3 py-2 text-sm font-medium text-violet-50 hover:bg-[#341b4a]"
           >
             Cancel
           </button>
           <button
             type="button"
             onClick={() => onSave(editedValue)}
-            className="rounded bg-blue-600 px-3 py-2 text-sm font-medium text-white hover:bg-blue-700"
+            className="rounded-full bg-yellow-300 px-3 py-2 text-sm font-medium text-violet-950 hover:bg-yellow-200"
           >
             Save
           </button>
@@ -129,27 +129,27 @@ function TimerAndControlsCell({
   }, [])
 
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex flex-wrap items-center gap-2">
       <button
         onClick={startTimer}
         disabled={isRunning}
-        className="px-3 py-1 bg-green-500 text-white rounded hover:bg-green-600 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors"
+        className="rounded-full bg-violet-500 px-3 py-1.5 text-sm font-medium text-white transition hover:bg-violet-400 disabled:cursor-not-allowed disabled:bg-violet-300/40"
       >
         Start
       </button>
       <button
         onClick={stopTimer}
         disabled={!isRunning}
-        className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors"
+        className="rounded-full border border-violet-300/20 bg-[#2a163c] px-3 py-1.5 text-sm font-medium text-violet-50 transition hover:bg-[#341b4a] disabled:cursor-not-allowed disabled:opacity-40"
       >
         Stop
       </button>
-      <span className="font-mono font-semibold text-lg min-w-[85px] text-center tabular-nums">
+      <span className="min-w-[85px] text-center font-mono text-lg font-semibold tabular-nums text-yellow-100">
         {formatTime(milliseconds)}
       </span>
       <button
         onClick={handleSave}
-        className="px-3 py-1 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
+        className="rounded-full bg-yellow-300 px-3 py-1.5 text-sm font-medium text-violet-950 transition hover:bg-yellow-200"
       >
         Save
       </button>
@@ -251,7 +251,7 @@ function App() {
             value={info.getValue()}
             readOnly
             onClick={() => openNameEditor(info.row.original.id, info.getValue() as string)}
-            className="w-full cursor-pointer rounded border border-gray-300 bg-white px-2 py-1 text-left focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full cursor-pointer rounded-xl border border-violet-300/20 bg-[#120914]/70 px-2 py-1 text-left text-violet-50 focus:outline-none focus:ring-2 focus:ring-yellow-300/50"
           />
         ),
       }),
@@ -324,65 +324,68 @@ function App() {
   })
 
   return (
-    <div className="p-8">
-      {/* Added flexbox to position title and export button inline */}
-      <div className="flex justify-between items-center mb-6">
-        <h1 className="text-3xl font-bold">Race Timer</h1>
-        <button
-          onClick={handleExportExcel}
-          className="rounded bg-green-600 px-4 py-2 font-semibold text-white shadow hover:bg-green-700 transition-colors"
-        >
-          Export to Excel
-        </button>
-      </div>
-      
-      <div className="overflow-x-auto border rounded-lg">
-        <table className="w-full border-collapse">
-          <thead>
-            {table.getHeaderGroups().map((headerGroup) => (
-              <tr key={headerGroup.id} className="border-b bg-gray-100">
-                {headerGroup.headers.map((header) => (
-                  <th
-                    key={header.id}
-                    className="px-4 py-2 text-left font-semibold border-r last:border-r-0"
-                  >
-                    {header.isPlaceholder
-                      ? null
-                      : flexRender(
-                          header.column.columnDef.header,
-                          header.getContext()
+    <div className="min-h-screen bg-[radial-gradient(circle_at_top_left,_rgba(250,204,21,0.12),_transparent_32%),linear-gradient(135deg,_#14091f_0%,_#2b163b_52%,_#160d21_100%)] p-4 text-violet-50 sm:p-8">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-6 flex flex-col gap-4 rounded-[2rem] border border-violet-300/15 bg-[#1c0d2a]/80 p-6 shadow-[0_35px_120px_-30px_rgba(168,85,247,0.35)] sm:flex-row sm:items-center sm:justify-between">
+          <h1 className="text-3xl font-bold text-white">Race Timer</h1>
+          <button
+            onClick={handleExportExcel}
+            className="rounded-full bg-yellow-300 px-4 py-2 font-semibold text-violet-950 shadow transition hover:bg-yellow-200"
+          >
+            Export to Excel
+          </button>
+        </div>
+
+        <div className="overflow-hidden rounded-[1.5rem] border border-violet-300/15 bg-[#120914]/60 shadow-[0_20px_100px_-40px_rgba(168,85,247,0.35)]">
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse">
+              <thead>
+                {table.getHeaderGroups().map((headerGroup) => (
+                  <tr key={headerGroup.id} className="border-b border-violet-300/10 bg-[#2a163c] text-left text-violet-50">
+                    {headerGroup.headers.map((header) => (
+                      <th
+                        key={header.id}
+                        className="border-r border-violet-300/10 px-4 py-3 text-left font-semibold last:border-r-0"
+                      >
+                        {header.isPlaceholder
+                          ? null
+                          : flexRender(
+                              header.column.columnDef.header,
+                              header.getContext()
+                            )}
+                      </th>
+                    ))}
+                  </tr>
+                ))}
+              </thead>
+              <tbody>
+                {table.getRowModel().rows.map((row) => (
+                  <tr key={row.id} className="border-b border-violet-300/10 hover:bg-[#2a163c]/40">
+                    {row.getVisibleCells().map((cell) => (
+                      <td
+                        key={cell.id}
+                        className="border-r border-violet-300/10 px-4 py-3 text-violet-50 last:border-r-0"
+                      >
+                        {flexRender(
+                          cell.column.columnDef.cell,
+                          cell.getContext()
                         )}
-                  </th>
+                      </td>
+                    ))}
+                  </tr>
                 ))}
-              </tr>
-            ))}
-          </thead>
-          <tbody>
-            {table.getRowModel().rows.map((row) => (
-              <tr key={row.id} className="border-b hover:bg-gray-50">
-                {row.getVisibleCells().map((cell) => (
-                  <td
-                    key={cell.id}
-                    className="px-4 py-2 border-r last:border-r-0"
-                  >
-                    {flexRender(
-                      cell.column.columnDef.cell,
-                      cell.getContext()
-                    )}
-                  </td>
-                ))}
-              </tr>
-            ))}
-          </tbody>
-        </table>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        {activeEditRow ? (
+          <InlineEditPopup
+            initialValue={activeEditRow.value}
+            onCancel={closeNameEditor}
+            onSave={(updatedValue) => handleSaveName(activeEditRow.rowId, updatedValue)}
+          />
+        ) : null}
       </div>
-      {activeEditRow ? (
-        <InlineEditPopup
-          initialValue={activeEditRow.value}
-          onCancel={closeNameEditor}
-          onSave={(updatedValue) => handleSaveName(activeEditRow.rowId, updatedValue)}
-        />
-      ) : null}
     </div>
   )
 }

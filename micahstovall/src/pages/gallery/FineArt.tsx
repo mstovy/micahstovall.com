@@ -57,6 +57,29 @@ export default function FineArt() {
     if (e.target === overlayRef.current) close()
   }
 
+  const handleDownload = useCallback(async () => {
+      try {
+        const url = images[index]
+        const res = await fetch(url)
+        if (!res.ok) throw new Error('Network response was not ok')
+        const blob = await res.blob()
+        const blobUrl = URL.createObjectURL(blob)
+  
+        const link = document.createElement('a')
+        link.href = blobUrl
+        link.download = url.split('/').pop() || 'image.jpg'
+        document.body.appendChild(link)
+        link.click()
+        document.body.removeChild(link)
+  
+        // Revoke the object URL after a short delay to ensure the download starts
+        setTimeout(() => URL.revokeObjectURL(blobUrl), 1000)
+      } catch (err) {
+        // eslint-disable-next-line no-console
+        console.error('Download failed', err)
+      }
+    }, [images, index])
+
   return (
     <section className="mx-auto w-full max-w-7xl px-4 py-12">
       <h1 className="mb-6 text-3xl font-semibold text-slate-900 dark:text-slate-100">Fine Art Gallery</h1>
@@ -119,6 +142,16 @@ export default function FineArt() {
             >
               ›
             </button>
+
+            <div className="mt-3 flex justify-between text-sm text-white/90">
+              <button
+                type="button"
+                onClick={handleDownload}
+                className="rounded-md bg-white/10 px-3 py-1 text-xs hover:bg-white/20"
+              >
+                Download Image
+              </button>
+            </div>
 
             <div className="mt-3 flex items-center justify-between text-sm text-white/90">
               <div>Image {index + 1} / {images.length}</div>

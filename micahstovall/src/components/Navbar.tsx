@@ -19,8 +19,8 @@ const navItems = [
 
 function linkClass({ isActive }: { isActive: boolean }) {
   return isActive
-    ? 'rounded-md bg-slate-900 px-3 py-2 text-sm font-medium text-white'
-    : 'rounded-md px-3 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-slate-900'
+    ? 'rounded-full bg-yellow-300/15 px-3 py-2 text-sm font-medium text-yellow-100 ring-1 ring-yellow-300/40'
+    : 'rounded-full px-3 py-2 text-sm font-medium text-violet-100 transition hover:bg-white/10 hover:text-yellow-200'
 }
 
 export default function Navbar() {
@@ -28,9 +28,9 @@ export default function Navbar() {
   const navigate = useNavigate()
 
   return (
-    <header className="sticky top-0 z-40 border-b border-slate-200/70 bg-white/95 backdrop-blur-xl shadow-sm">
-      <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-4 sm:px-6 lg:px-8">
-        <NavLink to="/" className="text-lg font-semibold tracking-tight text-slate-900">
+    <header className="sticky top-0 z-40 border-b border-violet-300/15 bg-[#190b2a]/80 backdrop-blur-xl">
+      <div className="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-4 sm:px-6 lg:px-8">
+        <NavLink to="/" className="text-lg font-semibold tracking-tight text-white">
           MicahStovall
         </NavLink>
 
@@ -69,7 +69,7 @@ export default function Navbar() {
 
           <button
             type="button"
-            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 transition hover:bg-slate-50 md:hidden"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-violet-300/20 bg-[#2a163c]/80 text-violet-50 transition hover:bg-[#341b4a] md:hidden"
             onClick={() => setMobileOpen((current) => !current)}
             aria-label="Toggle navigation"
             aria-expanded={mobileOpen}
@@ -79,7 +79,7 @@ export default function Navbar() {
         </div>
 
         <div className={`w-full md:hidden ${mobileOpen ? 'block' : 'hidden'}`}>
-          <div className="mt-4 space-y-2 rounded-3xl border border-slate-200/80 bg-white/95 p-4 shadow-sm">
+          <div className="mt-4 space-y-2 rounded-3xl border border-violet-300/15 bg-[#1d102a]/90 p-4 shadow-[0_20px_80px_-40px_rgba(168,85,247,0.35)]">
             {navItems.map((item) => (
               <NavLink
                 key={item.path}

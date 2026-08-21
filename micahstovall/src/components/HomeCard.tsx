@@ -1,8 +1,15 @@
+import { Link } from 'react-router-dom'
 import ParallaxImageSection from './ParallaxImageSection'
 
 const imageData = import.meta.glob('/src/assets/images/navigation/*', {
   eager: true,
 }) as Record<string, { default: string }>
+
+const sectionPaths: Record<string, string> = {
+  'highwire_6.16.20-19': '/gallery/climbing',
+  '11-3-24_i35-insta-6': '/gallery/mountainbiking',
+  'penn-2': '/gallery/backcountryskiing',
+}
 
 const sections = Object.keys(imageData)
   .sort()
@@ -24,7 +31,8 @@ const sections = Object.keys(imageData)
       src,
       alt: `${fileName.replace(/[-_]/g, ' ')} gallery image`,
       title: titleMap[fileName] ?? `Featured scene ${index + 1}`,
-      description: captionMap[fileName] ?? `Featured scene ${index + 1}`
+      description: captionMap[fileName] ?? `Featured scene ${index + 1}`,
+      to: sectionPaths[fileName] ?? '/gallery',
     }
   })
 
@@ -42,13 +50,14 @@ export default function HomeCard() {
   return (
     <div className="space-y-10">
       {sections.map((section) => (
-        <ParallaxImageSection
-          key={section.src}
-          src={section.src}
-          alt={section.alt}
-          title={section.title}
-          description={section.description}
-        />
+        <Link key={section.src} to={section.to} className="block transition-opacity duration-200 hover:opacity-95" aria-label={`View ${section.title} gallery`}>
+          <ParallaxImageSection
+            src={section.src}
+            alt={section.alt}
+            title={section.title}
+            description={section.description}
+          />
+        </Link>
       ))}
     </div>
   )

@@ -55,7 +55,7 @@ export default function ParallaxImageSection({ src, alt, title, description }: P
   }, [])
 
   return (
-    <section ref={containerRef} className="relative overflow-hidden rounded-[2rem] bg-slate-950/5 py-16 sm:py-24">
+    <section ref={containerRef} className="relative overflow-hidden rounded-[2rem] border border-violet-300/15 bg-[#170d25]/75 py-16 shadow-[0_20px_80px_-40px_rgba(168,85,247,0.35)] sm:py-24">
       <div className="absolute inset-0 overflow-hidden">
         <img
           ref={imageRef}
@@ -64,13 +64,13 @@ export default function ParallaxImageSection({ src, alt, title, description }: P
           loading="lazy"
           className="h-full w-full object-cover transition-transform duration-700 ease-out will-change-transform"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/30 to-transparent" aria-hidden="true" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#120914]/85 via-[#220d2f]/40 to-transparent" aria-hidden="true" />
       </div>
 
       <div className="relative z-10 mx-auto flex max-w-6xl flex-col gap-6 px-6 text-white sm:px-10">
-        <div className="max-w-sm rounded-2xl border border-white/10 bg-slate-950/45 p-4 backdrop-blur-md">
+        <div className="max-w-sm rounded-2xl border border-violet-200/15 bg-[#1d102a]/60 p-4 backdrop-blur-md">
 
-  <p className="text-[10px] uppercase tracking-[0.24em] text-slate-300/70">
+  <p className="text-[10px] uppercase tracking-[0.24em] text-yellow-100/80">
     Featured image
   </p>
 
@@ -79,7 +79,7 @@ export default function ParallaxImageSection({ src, alt, title, description }: P
   </h2>
 
   {description ? (
-    <p className="mt-2 text-sm leading-6 text-slate-200/75">
+    <p className="mt-2 text-sm leading-6 text-violet-100/80">
       {description}
     </p>
   ) : null}

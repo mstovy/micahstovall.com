@@ -4,7 +4,7 @@ function Card({ children, className = '' }: { children: React.ReactNode; classNa
   return (
     <div
       className={
-        'w-full rounded-3xl border border-slate-200/80 bg-white/90 p-8 shadow-sm shadow-slate-200/60 ' +
+        'w-full rounded-[1.75rem] border border-violet-300/15 bg-[#1c0d2a]/80 p-8 shadow-[0_20px_100px_-40px_rgba(168,85,247,0.35)] backdrop-blur-xl ' +
         className
       }
     >
@@ -85,24 +85,24 @@ export default function Contact() {
   }
 
   return (
-    <section className="mx-auto flex min-h-[60vh] w-full max-w-4xl items-start justify-center px-4 py-16 sm:px-6 lg:px-8">
-      <div className="space-y-8 w-full">
+    <section className="mx-auto flex min-h-[60vh] w-full max-w-5xl items-start justify-center px-4 py-8 sm:px-6 lg:px-8 lg:py-12">
+      <div className="w-full space-y-8">
         <Card>
-          <h1 className="text-3xl font-semibold tracking-tight text-slate-900">Contact</h1>
-          <p className="mt-2 text-sm leading-7 text-slate-600">
+          <h1 className="text-3xl font-semibold tracking-tight text-white">Contact</h1>
+          <p className="mt-2 text-sm leading-7 text-violet-100/80">
             I aim to respond within 2 business days. For project inquiries, portfolio licensing, or
             press requests, please use the form below. For urgent matters, email{' '}
-            <span className="font-medium">info@micahstovall.com</span> directly.
+            <span className="font-medium text-yellow-200">info@micahstovall.com</span> directly.
           </p>
         </Card>
 
         <Card className="p-6">
           <form onSubmit={handleSubmit} className="grid gap-4">
             <label className="flex flex-col">
-              <span className="mb-2 text-sm font-medium text-slate-700">Name</span>
+              <span className="mb-2 text-sm font-medium text-violet-100">Name</span>
               <input
-                className={`w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-300 ${
-                  touched.name && errors.name ? 'ring-2 ring-red-200' : ''
+                className={`w-full rounded-xl border border-violet-300/20 bg-[#120914]/70 px-4 py-3 text-sm text-white placeholder:text-violet-200/50 focus:outline-none focus:ring-2 focus:ring-yellow-300/50 ${
+                  touched.name && errors.name ? 'ring-2 ring-red-400/50' : ''
                 }`}
                 value={name}
                 onChange={(e) => setName(e.target.value)}
@@ -115,10 +115,10 @@ export default function Contact() {
             </label>
 
             <label className="flex flex-col">
-              <span className="mb-2 text-sm font-medium text-slate-700">Email</span>
+              <span className="mb-2 text-sm font-medium text-violet-100">Email</span>
               <input
-                className={`w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-300 ${
-                  touched.email && errors.email ? 'ring-2 ring-red-200' : ''
+                className={`w-full rounded-xl border border-violet-300/20 bg-[#120914]/70 px-4 py-3 text-sm text-white placeholder:text-violet-200/50 focus:outline-none focus:ring-2 focus:ring-yellow-300/50 ${
+                  touched.email && errors.email ? 'ring-2 ring-red-400/50' : ''
                 }`}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -132,10 +132,10 @@ export default function Contact() {
             </label>
 
             <label className="flex flex-col">
-              <span className="mb-2 text-sm font-medium text-slate-700">Message</span>
+              <span className="mb-2 text-sm font-medium text-violet-100">Message</span>
               <textarea
-                className={`min-h-[140px] w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-300 ${
-                  touched.message && errors.message ? 'ring-2 ring-red-200' : ''
+                className={`min-h-[140px] w-full rounded-2xl border border-violet-300/20 bg-[#120914]/70 px-4 py-3 text-sm text-white placeholder:text-violet-200/50 focus:outline-none focus:ring-2 focus:ring-yellow-300/50 ${
+                  touched.message && errors.message ? 'ring-2 ring-red-400/50' : ''
                 }`}
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
@@ -151,7 +151,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={loading}
-                className="inline-flex items-center justify-center rounded-xl bg-slate-900 px-5 py-3 text-sm font-medium text-white shadow-sm transition hover:bg-slate-800 disabled:opacity-60"
+                className="inline-flex items-center justify-center rounded-full bg-yellow-300 px-5 py-3 text-sm font-medium text-violet-950 transition hover:bg-yellow-200 disabled:opacity-60"
               >
                 {loading ? 'Sending…' : 'Send message'}
               </button>
