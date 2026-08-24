@@ -1,0 +1,31 @@
+/* Ported lightning page styles */
+body.lightning-page {
+  background: linear-gradient(#000, #151515);
+}
+
+canvas.lightning-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.lightning-header {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1em;
+  color: #fff;
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+  z-index: 10;
+}
+
+.lightning-footer {
+  font-size: 1em;
+  color: #fff;
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.lightning-container a { color: #fff; }

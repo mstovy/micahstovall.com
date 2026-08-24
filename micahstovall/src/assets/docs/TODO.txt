@@ -1,0 +1,77 @@
+TODO:
+
+--------------------------------------------------------------------
+
+Creat Sign In Pop UP
+- only 1 account can sign in
+- pop up for sign in 
+- navigate to a new manage page
+
+--------------------------------------------------------------------
+
+Create Manage Page 
+- allows upload and delete of images in galleries
+- able to select between the 4 different galleries
+
+--------------------------------------------------------------------
+
+Create Web Development Page
+- link to github & linkedin
+- host the onld micahstovall.com lightning page
+- host some more little widgets you can make
+- link to codepen
+
+--------------------------------------------------------------------
+
+Create Music Page
+- Have an about for Stovy project
+- list out all discography with description for each album
+- link to soundcloud & bandcamp
+
+--------------------------------------------------------------------
+
+Set Favicon for page
+
+--------------------------------------------------------------------
+
+Create Backcountry Skiing Gallery Page
+- navigation
+- gallery page
+- find images
+
+--------------------------------------------------------------------
+
+Create more Gallery pages
+- add the navigation for these
+- make the gallery option i the nav bar have a drop down the links to the top 4 options
+
+--------------------------------------------------------------------
+
+Fix tsconfig.json
+- errors on that page
+
+--------------------------------------------------------------------
+
+Fix Tools dropdown to have nested drop down
+
+--------------------------------------------------------------------
+
+Fix Gallery page to have the images in the cards
+
+--------------------------------------------------------------------
+
+Home page ui updates
+- Fix home page by adding images in cards
+- and formatting of the cards align the text to frame the subject use thirds
+- main landing image needs to be set and make it the entire page
+- fix parallax effect to be spread across the page not just a card
+
+--------------------------------------------------------------------
+
+Test Contact form works
+
+--------------------------------------------------------------------
+
+Update README.md
+
+--------------------------------------------------------------------
