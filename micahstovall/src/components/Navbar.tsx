@@ -31,7 +31,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-40 border-b border-violet-300/15 bg-[#190b2a]/80 backdrop-blur-xl">
       <div className="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-4 sm:px-6 lg:px-8">
         <NavLink to="/" className="text-lg font-semibold tracking-tight text-white">
-          MicahStovall
+          Micah Stovall
         </NavLink>
 
         <div className="flex items-center gap-3">

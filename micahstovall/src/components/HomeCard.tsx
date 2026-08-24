@@ -6,9 +6,11 @@ const imageData = import.meta.glob('/src/assets/images/navigation/*', {
 }) as Record<string, { default: string }>
 
 const sectionPaths: Record<string, string> = {
-  'highwire_6.16.20-19': '/gallery/climbing',
-  '11-3-24_i35-insta-6': '/gallery/mountainbiking',
-  'penn-2': '/gallery/backcountryskiing',
+  '1-penn-2': '/gallery/backcountryskiing',
+  '2-stovy' : '/music',
+  '3-highwire_6.16.20-19' : '/gallery/climbing',
+  '' : '',
+  '5-11-3-24_i35-insta-6': '/gallery/mountainbiking'
 }
 
 const sections = Object.keys(imageData)
@@ -17,14 +19,18 @@ const sections = Object.keys(imageData)
     const src = imageData[path].default
     const fileName = path.split('/').pop()?.replace(/\.[^.]+$/, '') ?? `image-${index + 1}`
     const titleMap: Record<string, string> = {
-      'highwire_6.16.20-19': 'Climbing Photgraphy',
-      '11-3-24_i35-insta-6': 'Mountain Biking Photography',
-      'penn-2': 'Backcountry Skiing and Splitboarding Photography',
+      '1-penn-2': 'Backcountry Skiing and Splitboarding Photography',
+      '2-stovy' : 'Stovy',
+      '3-highwire_6.16.20-19': 'Climbing Photgraphy',
+      '' : '',
+      '5-11-3-24_i35-insta-6': 'Mountain Biking Photography',
     }
     const captionMap: Record<string, string> = {
-      'highwire_6.16.20-19': 'Curt in Clear Creek Canyon',
-      '11-3-24_i35-insta-6': 'Jacob taking it to Flat',
-      'penn-2': 'Penn sending it off the Triple',
+      '1-penn-2': 'Penn sending it off the Triple',
+      '2-stovy' : 'Throwing down',
+      '3-highwire_6.16.20-19': 'Curt in Clear Creek Canyon',
+      '' : '',
+      '5-11-3-24_i35-insta-6': 'Jacob taking it to Flat'
     }
 
     return {
