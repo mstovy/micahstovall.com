@@ -1,3 +1,4 @@
+import { lazy, Suspense } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import About from './pages/About'
 import Contact from './pages/Contact'
@@ -13,9 +14,10 @@ import GalleryProducts from './pages/gallery/Products'
 import Home from './pages/Home'
 import Layout from './Layout'
 import Music from './pages/Music'
-import RaceTimer from './pages/RaceTimer'
 import WebDev from './pages/WebDev'
 import Lightning from './pages/Lightning'
+
+const RaceTimer = lazy(() => import('./pages/RaceTimer'))
 
 function App() {
   return (
@@ -34,7 +36,7 @@ function App() {
           <Route path="gallery/street" element={<GalleryStreet />} />
           <Route path="gallery/fineart" element={<GalleryFineArt />} />
           <Route path="gallery/products" element={<GalleryProducts />} />
-          <Route path="racetimer" element={<RaceTimer />} />
+          <Route path="racetimer" element={<Suspense fallback={<div>Loading timer...</div>}><RaceTimer /></Suspense>} />
           <Route path="music" element={<Music />} />
           <Route path="webdev" element={<WebDev />} />
           <Route path="lightning" element={<Lightning />} />

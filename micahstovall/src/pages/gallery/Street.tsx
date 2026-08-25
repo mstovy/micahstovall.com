@@ -6,7 +6,8 @@ export default function Street() {
   // Load all images in the street folder using Vite import.meta.glob
   const modules = import.meta.glob("../../assets/images/street/*.{jpg,jpeg,png,webp}", {
     eager: true,
-    as: "url",
+    query: "?url",
+    import: "default",
   }) as ImageMap
 
   const images = useMemo(() => Object.values(modules), [modules])
@@ -67,7 +68,7 @@ export default function Street() {
   
         const link = document.createElement('a')
         link.href = blobUrl
-        link.download = url.split('/').pop() || 'image.jpg'
+        link.download = new URL(url, window.location.href).pathname.split('/').pop() || 'image.jpg'
         document.body.appendChild(link)
         link.click()
         document.body.removeChild(link)
