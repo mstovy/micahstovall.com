@@ -10,11 +10,11 @@ export default function Home() {
               Photography / Music Production / Software Development
             </p>
             <h1 className="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-              Explore photos, music, and software projects by Micah Stovall
+              Micah Stovall
             </h1>
           </div>
           <p className="text-base leading-8 text-violet-100/80 sm:text-lg">
-            Need to put something here
+            Explore photos, music, and software projects by Micah Stovall
           </p>
         </div>
       </section>

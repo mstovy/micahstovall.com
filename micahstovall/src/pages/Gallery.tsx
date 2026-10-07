@@ -23,7 +23,7 @@ const cards = [
     title: "Products",
     subtitle: "Product Showcases",
     to: "/gallery/products",
-    image: "../assets/images/products/11-3-24_i35-insta-6.jpg"
+    image: "../assets/images/products/"
   },
   {
     title: "Street",
@@ -35,13 +35,13 @@ const cards = [
     title: "Fine Art",
     subtitle: "Fine Art Photography",
     to: "/gallery/fineart",
-    image: "../assets/images/fineart/"
+    image: "../assets/images/fineart/20260927-5.jpg"
   },
   {
     title: "Landscapes",
     subtitle: "Natural Landscapes",
     to: "/gallery/landscapes",
-    image: "../assets/images/landscapes/proj_1-4.jpg"
+    image: "../assets/images/landscapes/IMG_1720.jpeg"
   },
   {
     title: "Portraits",
