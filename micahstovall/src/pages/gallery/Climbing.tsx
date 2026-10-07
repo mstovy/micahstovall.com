@@ -83,7 +83,7 @@ export default function Climbing() {
 
   return (
     <section className="mx-auto w-full max-w-7xl px-4 py-12">
-      <h1 className="mb-6 text-3xl font-semibold text-slate-900 dark:text-slate-100">Climbing Gallery</h1>
+      <h1 className="mb-6 text-3xl font-semibold text-slate-900 text-white">Climbing Gallery</h1>
 
       <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {images.length === 0 && (
