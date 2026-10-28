@@ -46,14 +46,14 @@ export default function WebDev(): JSX.Element {
                 Web Development
               </p>
               <CardTitle className="mt-4 text-3xl font-semibold text-white sm:text-4xl">
-                Clean interfaces for modern creative brands.
+                User Experience Focused Design 
               </CardTitle>
               <CardDescription className="mt-4 space-y-4 text-base leading-8 text-violet-100/80">
                 <p>
-                  I build thoughtful digital experiences with a strong focus on clarity, motion, and visual consistency across devices.
+                  Built and maintained full-stack application features across frontend interfaces, backend services, and relational databases while supporting production releases and continuous improvements.
                 </p>
                 <p>
-                  The work blends React, TypeScript, and polished UI systems to create experiences that feel both elegant and functional.
+                  My personal projects combine React, TypeScript, and polished UI systems to create experiences that are both elegant and functional. Professionally, I develop effective solutions for enterprise applications while balancing technical requirements with stakeholder needs.
                 </p>
               </CardDescription>
             </CardContent>
@@ -62,15 +62,42 @@ export default function WebDev(): JSX.Element {
       </div>
 
       <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
-        <InfoCard title="Approach">
+        <InfoCard title="Experience">
           <span>
-            Every build is structured for performance and maintainability, with careful attention to typography, spacing, and interaction detail.
+            4+ Years as a professional Full Stack developer, working mainly in C# & ASP.NET on enterprise applications.
           </span>
         </InfoCard>
 
-        <InfoCard title="Focus Areas">
+        <InfoCard title="This Website">
           <span>
-            Frontend architecture, responsive design systems, motion, and refined user flows for portfolio, editorial, and product experiences.
+            Designed entirely by Micah with a Vite React frontend utilizing Tailwind for styling. The tools included on this site are experimental projects created for prototyping ideas!
+          </span>
+        </InfoCard>
+      </div>
+            <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
+        <InfoCard title="GitHub">
+          <span>
+            <a
+              href="https://github.com/mstovy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-yellow-200/80 hover:underline"
+            >
+              View my GitHub
+            </a>
+          </span>
+        </InfoCard>
+
+        <InfoCard title="LinkedIn">
+          <span>
+            <a
+              href="https://www.linkedin.com/in/micah-stovall/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-yellow-200/80 hover:underline"
+            >
+              View my LinkedIn
+            </a>
           </span>
         </InfoCard>
       </div>

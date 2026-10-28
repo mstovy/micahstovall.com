@@ -53,15 +53,15 @@ export default function About(): JSX.Element {
                 About
               </div>
               <CardTitle className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-                Clear craft, thoughtful stories.
+                Micah Stovall
               </CardTitle>
               <CardDescription className="mt-4 space-y-4">
                 <p className="text-base leading-8 text-violet-100/80">
-                  Hi, I’m Micah. I shoot adventure style photography, love to produce electronic music that I DJ with and develop web applications.
+                  Hi, I’m Micah. I shoot adventure photography, love to produce electronic music that I DJ with and develop web applications.
                   This site showcases the variety of the projects I work on; reach out via the contact page for project inquiries or collaborations.
                 </p>
                 <p className="text-sm leading-7 text-violet-200/80">
-                  Educated with a degree in Photography from the University of Colorado Denver.
+                  Educated with a degree in Computer Science Engineering & Photography from the University of Colorado Denver.
                 </p>
               </CardDescription>
             </CardContent>
@@ -72,14 +72,14 @@ export default function About(): JSX.Element {
           <InfoCard title="Background">
             <span>
               Worked across commercial and personal photography projects, focusing on landscape and action sports.
-              I value thoughtful composition and a restrained aesthetic.
+              I value thoughtful composition with a focus on the subject to highlight the intensity of the scene.
             </span>
           </InfoCard>
 
           <InfoCard title="Approach">
             <span>
-              I prioritize collaboration and clear communication. My process blends planning with flexibility to capture honest,
-              impactful imagery.
+              I immerses myself in the energy of the moment, anticipating split-second movements and capturing dynamic, high-impact images. 
+              I combine technical precision with creativity to tell the story of the athlete, the environment, and overall experience.
             </span>
           </InfoCard>
         </div>

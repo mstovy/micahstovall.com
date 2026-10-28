@@ -6,7 +6,8 @@ export default function Climbing() {
   // Load all images in the climbing folder using Vite import.meta.glob
   const modules = import.meta.glob("../../assets/images/mountainbiking/*.{jpg,jpeg,png,webp}", {
     eager: true,
-    as: "url",
+    query: "?url",
+    import: "default",
   }) as ImageMap
 
   const images = useMemo(() => Object.values(modules), [modules])
@@ -67,7 +68,7 @@ export default function Climbing() {
   
         const link = document.createElement('a')
         link.href = blobUrl
-        link.download = url.split('/').pop() || 'image.jpg'
+        link.download = new URL(url, window.location.href).pathname.split('/').pop() || 'image.jpg'
         document.body.appendChild(link)
         link.click()
         document.body.removeChild(link)
@@ -82,7 +83,7 @@ export default function Climbing() {
 
   return (
     <section className="mx-auto w-full max-w-7xl px-4 py-12">
-      <h1 className="mb-6 text-3xl font-semibold text-slate-900 dark:text-slate-100">MountainBiking Gallery</h1>
+      <h1 className="mb-6 text-3xl font-semibold text-slate-900 text-white">Mountain Biking Gallery</h1>
 
       <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {images.length === 0 && (

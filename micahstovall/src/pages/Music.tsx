@@ -116,8 +116,8 @@ export default function Music(): JSX.Element {
 
               <div className="flex flex-wrap gap-3">
                 <a
-                  href="mailto:bookings@micahvale.com"
-                  className="inline-flex items-center justify-center rounded-full bg-yellow-300 px-5 py-2.5 text-sm font-medium text-violet-950 transition hover:bg-yellow-200"
+                  href="https://soundcloud.com/stovymusic"
+                  className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-white/10"
                 >
                   Listen Now
                 </a>
@@ -248,17 +248,17 @@ export default function Music(): JSX.Element {
                 Bookings & Social
               </p>
               <h2 className="mt-3 text-2xl font-semibold text-white sm:text-3xl">
-                Available for headline sets, intimate showcases, and brand activations.
+                Available for artist support sets, intimate events & sound system showcases
               </h2>
               <p className="mt-3 text-sm leading-7 text-violet-100/80 sm:text-base">
-                Reach out for live bookings, collaborations, or streaming links to follow the latest releases.
+                Reach out for live bookings or collaborations
               </p>
             </div>
 
             <div className="flex flex-wrap gap-3">
               <a
                 href="mailto:stovymusic@gmail.com"
-                className="inline-flex items-center justify-center rounded-full bg-yellow-300 px-5 py-2.5 text-sm font-medium text-violet-950 transition hover:bg-yellow-200"
+                className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-white/10"
               >
                 Book a Set
               </a>

@@ -289,23 +289,10 @@ const Lightning: React.FC = () => {
 
   return (
     <div className="page">
-      <header>
-        <div
-          className="header"
-          style={{ marginBottom: "50px" }}
-        >
-          Website Currently
-        </div>
-        </header>
-
       <canvas
         ref={canvasRef}
         id="canvas"
       />
-
-      <footer className="footer">
-        Copyright @2021 Stovall Media
-      </footer>
     </div>
   );
 };
